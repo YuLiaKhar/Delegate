@@ -18,13 +18,13 @@ namespace _1
             double rad = radius(Convert.ToDouble(Console.ReadLine()));
 
             Del diam = D;
-            Console.WriteLine($"D = {diam(rad)}");
+            Console.WriteLine($"D = {Math.Round(diam(rad), 2)}");
 
             Del s = S;
-            Console.WriteLine($"S = {s(rad)}");
+            Console.WriteLine($"S = {Math.Round(s(rad), 2)}");
 
             Del v = V;
-            Console.WriteLine($"V = {v(rad)}");
+            Console.WriteLine($"V = {Math.Round(v(rad), 2)}");
 
             Console.ReadKey();
         }
@@ -44,7 +44,7 @@ namespace _1
         }
         static double V(double r)
         {
-            double v  = (4 / 3) * Math.PI * (r * r * r);
+            double v  = (4 * Math.PI * (r * r * r))/3;
             return v;
         }
 
